@@ -1,1 +1,1 @@
-# homework6
+I feel like i made some good progress on this assignment with trying to juggle my first project at the same time, it was not easy though. In html I used some bootstrap to help me set up the layout, I also set up some containers with some columns in them that gave me the look i really wanted. in the javascript was where i struggles again. I kept getting syntax errors and some the api only worked about half the time. I wish I could have worked through it a bit with my tutor but I am also learning more than I thought i could.
