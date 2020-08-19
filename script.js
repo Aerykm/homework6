@@ -2,7 +2,7 @@
 
 moment().format('L');
 
-//-----------------------Search Function for Current City Weather----------------------------------//
+
 function searchCity(cityname) {
 
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityname + "&units=imperial&appid=3aaddb65d4c45ab202d80bfc10d62ce9";
@@ -14,12 +14,12 @@ function searchCity(cityname) {
     }).then(function (response) {
         console.log(response);
         console.log(queryURL);
-        //empty divs and ids that we need to dump content into.....
+
         $("#current").empty();
        var mainDate = moment().format('L');
  
 
-        //create HTML for city information......
+
         var cityNameEl = $("<h2>").text(response.name);
         var displayMainDate = cityNameEl.append(" " + mainDate);
         var tempEL = $("<p>").text("Tempraturer: " + response.main.temp);
@@ -45,7 +45,7 @@ function searchCity(cityname) {
             var currentIcon = $('<img>').attr("src", "http://openweathermap.org/img/wn/13d.png");
             currentIcon.attr("style", "height: 60px; width: 60px");
         }
-        //create HTML div to append new elements to render on page....
+
         var newDiv = $('<div>');
 
         newDiv.append(displayMainDate, currentIcon, tempEL, humEl, windEl);
@@ -62,7 +62,7 @@ var queryURLUV = "https://api.openweathermap.org/data/2.5/uvi?&appid3aaddb65d4c4
         }).then(function (response) {
             $('#uvl-display').empty();
             var uvlresults = response.value;
-            //create HTML for new div
+    
             var uvlEl = $("<button class='btn bg-success'>").text("UV Index: " + response.value);
       
             $('#uvl-display').html(uvlEl);
